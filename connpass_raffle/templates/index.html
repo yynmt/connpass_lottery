@@ -70,7 +70,11 @@ $(function(){
 <div id="main">
     {% if item %}
     <!-- 当選景品名表示部分 -->
-    <div class="item d-flex align-items-center justify-content-center w-100 display-2 text-center">{{ item }}</div>
+    <div class="item d-flex align-items-center justify-content-center w-100 display-2 text-center">
+        {% for i in item %}
+            {{ i }}<br>
+        {% endfor %}
+    </div>
     <div class="provider d-flex align-items-center justify-content-center w-100 display-3 text-center">by {{ provider }}</div>
     {% endif %}
 
